@@ -3,6 +3,7 @@ using namespace std;
 
 bool func(int n, int w, vector<int> &a){
 	if (n==0 && w==0) return true;
+	if (n==0) return false;
 	if (func(n-1, w, a)) return true;
 	if (func(n-1, w-a.at(n-1), a)) return true;
 	return false;
